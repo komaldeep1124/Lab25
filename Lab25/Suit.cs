@@ -13,7 +13,7 @@ namespace Lab25
         Hearts,
         Spades
      }
-class Suit
+class suit
     {
     }
 }

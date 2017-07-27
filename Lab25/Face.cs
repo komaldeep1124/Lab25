@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Lab25
 {
     public enum Face { Ace=1,Two,Three,Four,Five,Six,Seven,Eight,Nine,Ten,Jack,Queen,King}
-    class Face
+    class face
     {
     }
 }
