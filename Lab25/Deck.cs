@@ -39,11 +39,13 @@ namespace Lab25
                 }
             }
         }
-     
+       
         //public methods
         public override string ToString()
         {
             String outputString="";
+            outputString += "Deck Contains  Number of Cards: " + this.Count + "\n";
+            outputString += "==================================\n";
             foreach (Card card in this)
             {
                 outputString += "The " + card.Face + " of " + card.Suit + "\n";

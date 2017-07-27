@@ -17,9 +17,7 @@ namespace Lab25
             Console.WriteLine(deck.ToString());
             Console.WriteLine();
             deck.shuffle();
-            Console.WriteLine("Shuffled Deck");
-            Console.WriteLine("Shuffled Deck   Number of Cards: " + deck.Count);
-            Console.WriteLine("===================");
+            
         }
     }
 }
