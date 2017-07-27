@@ -39,6 +39,7 @@ namespace Lab25
                 }
             }
         }
+     
         //public methods
         public override string ToString()
         {
