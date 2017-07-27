@@ -8,7 +8,7 @@ namespace Lab25
     //name:komaldeep akur
     //student no:300926834
 {
-        public  class Card
+       
         public class Card:ICloneable
     {
             //private instance variables
@@ -42,6 +42,12 @@ namespace Lab25
         {
             return new Card(this.Face, this.Suit);
         }
+        public static void OverWrite(Card first, Card second)
+         {
+            first.Face = second.Face;
+            first.Suit = second.Suit;
+        }
+ 
 
     }
 }
