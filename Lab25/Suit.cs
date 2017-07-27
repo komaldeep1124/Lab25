@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Lab25
 {
-    class Suit
+    public enum Suit
+     {
+        Clubs,
+        Diamonds,
+        Hearts,
+        Spades
+     }
+class Suit
     {
     }
 }
