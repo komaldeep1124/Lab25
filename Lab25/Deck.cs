@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab25
 {
-   public  class Deck:List<Card>
+   public  class Deck : CardList
     {
         //private variables
         private Random _random;
@@ -16,19 +16,17 @@ namespace Lab25
             get { return this._random; }
         }
         //public properties
+        //private properties
         //constructors
         /// <summary>
         /// main constructor for deck class
         /// </summary>
-        public Deck()
-        {
-            this._initialise();
-        }
-        // private methods
+      
+        // private  methods
         /// <summary>
         /// this is initialise method it sets value for private variables and public properties.
         /// </summary>
-        private void _initialise()
+        protected override void _initialise()
         {
             this._random = new Random();
             for  (int suit = (int)Suit.Clubs; suit <= (int)Suit.Spades; suit++)
@@ -41,6 +39,10 @@ namespace Lab25
         }
        
         //public methods
+        /// <summary>
+        /// over rides built in tostring method
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             String outputString="";
@@ -69,6 +71,14 @@ namespace Lab25
                 this[firstCard].Suit = tempCard.Suit;
             }
         }
+        public Card Deal1()
+        {
+            Card topCard = this[0];
+            this.RemoveAt(0);
+            return topCard;
+        }
+       
+            
 
 
     }

@@ -17,7 +17,18 @@ namespace Lab25
             Console.WriteLine(deck.ToString());
             Console.WriteLine();
             deck.shuffle();
+            Hand.Add(deck.Deal1());
+            Console.WriteLine(Hand.ToString());
+            Console.WriteLine();
+            Hand.Add(deck.Deal1());
+            Console.WriteLine(Hand.ToString());
             
+           Console.WriteLine();
+            Console.WriteLine(deck.ToString());
+
+
+
+
         }
     }
 }
