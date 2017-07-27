@@ -9,6 +9,12 @@ namespace Lab25
    public  class Deck:List<Card>
     {
         //private variables
+        private Random _random;
+            //private properties
+            private Random Random
+        {
+            get { return this._random; }
+        }
         //public properties
         //constructors
         /// <summary>
@@ -24,6 +30,7 @@ namespace Lab25
         /// </summary>
         private void _initialise()
         {
+            this._random = new Random();
             for  (int suit = (int)Suit.Clubs; suit <= (int)Suit.Spades; suit++)
             {
                 for (int face = (int)Face.Ace; face <= (int)Face.King; face++)
@@ -41,6 +48,23 @@ namespace Lab25
                 outputString += "The " + card.Face + " of " + card.Suit + "\n";
             }
             return outputString;
+        }
+        public void shuffle()
+        {
+            int firstCard;
+            int secondCard;
+            Card tempCard;
+            for (int card = 0; card < this.Count; card++)
+            {
+                firstCard = this.Random.Next(0, 52);
+                secondCard = this.Random.Next(0, 52);
+                
+                tempCard = (Card)this[secondCard].Clone();
+                this[secondCard].Face = this[firstCard].Face;
+                this[secondCard].Suit = this[firstCard].Suit;
+                this[firstCard].Face = tempCard.Face;
+                this[firstCard].Suit = tempCard.Suit;
+            }
         }
 
 

@@ -8,7 +8,8 @@ namespace Lab25
     //name:komaldeep akur
     //student no:300926834
 {
-   public  class Card
+        public  class Card
+        public class Card:ICloneable
     {
             //private instance variables
              private Face _face;
@@ -35,6 +36,11 @@ namespace Lab25
         {
             this.Face = face;
             this.Suit = suit;
+        }
+        //PUBLIC METHODS
+        public Object Clone()
+        {
+            return new Card(this.Face, this.Suit);
         }
 
     }
