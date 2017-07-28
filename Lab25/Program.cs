@@ -40,7 +40,7 @@ namespace Lab25
             Console.WriteLine();
 
 
-            hand = deck.Deal5();
+            hand = Deck.Deal1();
             Console.WriteLine(hand.ToString());
             hand.HighestCards(hand);
 
