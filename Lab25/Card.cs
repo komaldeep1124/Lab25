@@ -2,33 +2,53 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace Lab25
-    //name:komaldeep akur
-    //student no:300926834
+
+
+namespace COMP123_S2017_Lesson11B
 {
-       
-        public class Card:ICloneable
+    public class Card : ICloneable
     {
-            //private instance variables
-             private Face _face;
-             private Suit _suit;
-             //public properties
-             public Face Face
+        // PRIVATE INSTANCE VARIABLES
+        private Face _face;
+        private Suit _suit;
+
+        // PUBLIC PROPERTIES
+        public Face Face
         {
-            get { return this._face; }
-            set { this._face = value; }
+
+            get
+            {
+                return this._face;
+            }
+
+            set
+            {
+                this._face = value;
+            }
         }
+
         public Suit Suit
         {
-            get { return this._suit; }
-            set { this._suit = value; }
+
+            get
+            {
+                return this._suit;
+            }
+
+
+            set
+            {
+                this._suit = value;
+            }
+
         }
-        //constructor---
+
+        // CONSTRUCTORS
+
         /// <summary>
-        /// this is main constructor.
-        /// two paras:face and suit.
+        /// This is the main constructor.
+        /// It takes two parameters - face (Face) - suit (Suit)
         /// </summary>
         /// <param name="face"></param>
         /// <param name="suit"></param>
@@ -37,17 +57,33 @@ namespace Lab25
             this.Face = face;
             this.Suit = suit;
         }
-        //PUBLIC METHODS
-        public Object Clone()
+
+        
+
+
+        // PRIVATE METHODS
+
+        // PUBLIC METHODS
+        /// <summary>
+        /// This method overrides the built-in Clone method.
+        /// </summary>
+        /// <returns></returns>
+        public object Clone()
         {
             return new Card(this.Face, this.Suit);
         }
+
+
+        /// <summary>
+        /// This method overwrites the first card with the second card
+        /// </summary>
+        /// <param name="first"></param>
+        /// <param name="second"></param>
         public static void OverWrite(Card first, Card second)
-         {
+        {
             first.Face = second.Face;
             first.Suit = second.Suit;
         }
- 
 
     }
 }
